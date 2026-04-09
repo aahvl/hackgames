@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hack Games - Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif+KR:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <div class="bg-vignette"></div>
+
+    <div class="deco deco-1"></div>
+    <div class="deco deco-2"></div>
+    <div class="deco deco-3"></div>
+
+    <div class="scene" id="SceneEnvelope">
+      <p class="pre-label" id="preLabel">You have received a message</p>
+      <div class="envelope-wrap" id="envelopeWrap">
+        <div class="envelope" id="envelope">
+          <div class="env-back"></div>
+
+          <div class="letter" id="letter">
+            <div class="letter-inner">
+              <div class="letter-shapes">
+                <svg
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <circle cx="9" cy="9" r="6.2" />
+                </svg>
+                <svg
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <rect x="2.5" y="2.5" width="13" height="13" />
+                </svg>
+                <svg
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <polygon points="9,2 16.5,15.5 1.5,15.5" />
+                </svg>
+              </div>
+
+              <p class="letter-eyebrow">Player Invitation</p>
+              <p class="letter-title">HACK<br />GAMES</p>
+              <p class="letter-body">
+                You have been selected. Your response will determine everything.
+              </p>
+              <div class="letter-divider"></div>
+              <p class="letter-question">Will you participate in the Games?</p>
+              <div class="rsvp-buttons">
+                <div class="btn-wrap">
+                  <button class="btn btn-yes" id="btnYes" aria-label="Accept">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.4"
+                      stroke-linecap="round"
+                    >
+                      <circle cx="12" cy="12" r="8" />
+                    </svg>
+                    <div class="btn-glow"></div>
+                  </button>
+                  <span class="btn-label" id="labelYes">참여</span>
+                </div>
+
+                <div class="btn-wrap">
+                  <button class="btn btn-no" id="btnNo" aria-label="Decline">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.4"
+                      stroke-linecap="round"
+                    >
+                      <line x1="6" y1="6" x2="18" y2="18" />
+                      <line x1="18" y1="6" x2="6" y2="18" />
+                    </svg>
+                    <div class="btn-glow btn-glow-no"></div>
+                  </button>
+                  <span class="btn-label" id="labelNo">거절</span>
+                </div>
+              </div>
+
+              <p class="letter-hint">o accept &nbsp;·&nbsp; x decline</p>
+              <p class="letter-footer">The choice is yours. Until it isn't.</p>
+            </div>
+          </div>
+
+          <div class="env-flap" id="envFlap"></div>
+          <div class="env-body">
+            <div class="env-shapes">
+              <svg
+                viewBox="0 0 18 18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <circle cx="9" cy="9" r="6.2" />
+              </svg>
+              <svg
+                viewBox="0 0 18 18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <rect x="2.5" y="2.5" width="13" height="13" />
+              </svg>
+              <svg
+                viewBox="0 0 18 18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <polygon points="9,2 16.5,15.5 1.5,15.5" />
+              </svg>
+            </div>
+            <p class="env-number">No. 456</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <button class="open-btn" id="openBtn">
+      <span>Open envelope</span>
+      <svg
+        viewBox="0 0 20 20"
+        width="15"
+        height="15"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+      >
+        <polyline points="4,7 10,13 16,7" />
+      </svg>
+    </button>
+
+    <div class="redirect-overlay" id="redirectOverlay">
+      <div class="redirect-shapes">
+        <svg
+          viewBox="0 0 22 22"
+          fill="none"
+          stroke="#ff1450"
+          stroke-width="1.6"
+        >
+          <circle cx="11" cy="11" r="8.5" />
+        </svg>
+        <svg
+          viewBox="0 0 22 22"
+          fill="none"
+          stroke="#ff1450"
+          stroke-width="1.6"
+        >
+          <rect x="2" y="2" width="18" height="18" />
+        </svg>
+        <svg
+          viewBox="0 0 22 22"
+          fill="none"
+          stroke="#ff1450"
+          stroke-width="1.6"
+        >
+          <polygon points="11,1 21,21 1,21" />
+        </svg>
+      </div>
+      <span class="redirect-title">ENTERING the GAME...</span>
+      <div class="dots"><span></span><span></span><span></span></div>
+      <small class="redirect-sub">Redirecting you now...</small>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
